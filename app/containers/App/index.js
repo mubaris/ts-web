@@ -11,14 +11,15 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
-// import HomePage from 'containers/HomePage/Loadable';
 import Login from 'containers/Login';
+// import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
 
 const AppWrapper = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
     <AppWrapper>
       <Switch>
         <Route exact path="/" component={Login} />
+        <Route exact path="/login" component={Login} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

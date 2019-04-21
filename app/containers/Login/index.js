@@ -11,6 +11,8 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import Logo from 'components/Logo';
+
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectLogin from './selectors';
@@ -23,9 +25,10 @@ export class Login extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Login</title>
+          <title>Sign In | TableSync</title>
           <meta name="description" content="Description of Login" />
         </Helmet>
+        <Logo />
       </div>
     );
   }
